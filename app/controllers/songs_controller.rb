@@ -19,13 +19,14 @@ end
    if params[:artist_id] != nil
      @artist = Artist.find_by(id: params[:artist_id])
      @song = Song.find_by(id: params[:id])
-
+   else
       if Song.find_by(id: params[:id]) == nil
-         flash[:alert] = "Song not found."
-         redirect_to artists_path
+        flash[:alert] = "Song not found."
+        redirect_to artists_path
       else
-          @song = Song.find(params[:id])
+        @song = Song.find(params[:id])
       end
+    end
 end
 
   def new
