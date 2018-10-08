@@ -19,6 +19,7 @@ end
     if params[:id] == nil
       redirect_to artists_path
     else
+      binding.pry
     @song = Song.find(params[:id])
   end
 end
