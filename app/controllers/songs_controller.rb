@@ -15,11 +15,11 @@ end
 
   def show
     if params[:id] == nil
-  
-
+      redirect
+    else
     @song = Song.find(params[:id])
-
   end
+end
 
   def new
     @song = Song.new
