@@ -14,7 +14,8 @@ class SongsController < ApplicationController
 end
 
   def show
-  
+    binding.pry
+  if
     @song = Song.find(params[:id])
 
   end
