@@ -15,10 +15,14 @@ end
 
   def show
     #SongsController GET show with  artist redirects to artists songs when artist song not found
-  
+
    if params[:artist_id] != nil
      @artist = Artist.find_by(id: params[:artist_id])
+     if Song.find_by(id: params[:id]) == nil
+        redirect_to artist_songs_path(@artist)
+     else
      @song = Song.find_by(id: params[:id])
+    end
    else
       if Song.find_by(id: params[:id]) == nil
         flash[:alert] = "Song not found."
