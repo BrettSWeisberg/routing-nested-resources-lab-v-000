@@ -15,7 +15,7 @@ end
 
   def show
     #SongsController GET show with  artist redirects to artists songs when artist song not found
-    binding.pry
+  
    if params[:artist_id] != nil
      @artist = Artist.find_by(id: params[:artist_id])
      @song = Song.find_by(id: params[:id])
