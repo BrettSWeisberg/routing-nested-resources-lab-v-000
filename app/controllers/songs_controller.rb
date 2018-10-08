@@ -17,9 +17,10 @@ end
     #SongsController GET show with  artist redirects to artists songs when artist song not found
 
     if params[:id] == nil
+      binding.pry
       redirect_to artists_path
     else
-      
+
     @song = Song.find(params[:id])
   end
 end
