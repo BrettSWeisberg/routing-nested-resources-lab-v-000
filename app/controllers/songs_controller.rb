@@ -19,6 +19,7 @@ end
    if params[:artist_id] != nil
      @artist = Artist.find_by(id: params[:artist_id])
      if Song.find_by(id: params[:id]) == nil
+         flash[:alert] = "Song not found."
         redirect_to artist_songs_path(@artist)
      else
      @song = Song.find_by(id: params[:id])
