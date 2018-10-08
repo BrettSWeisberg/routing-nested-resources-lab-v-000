@@ -21449,3 +21449,4 @@ Completed 200 OK in 36796ms (Views: 1.6ms | ActiveRecord: 0.2ms)
   [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
 Processing by SongsController#show as HTML
   Parameters: {"id"=>"12345", "artist_id"=>"5"}
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
